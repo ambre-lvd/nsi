@@ -1,0 +1,34 @@
+h1
+{
+    font-size: 5em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-decoration: underline;
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: center;
+    color: black
+}
+
+body
+{
+    background-image: url("image/fond_rouge_principal.jpg");
+	border: 5px black double;
+    text-align: center;
+    color: black
+
+}
+ul {
+    font-size: 2em;
+    font-family: "Arial Black";
+    text-align: center;
+    color: black
+}
+
+.liens{
+
+        color:black;
+}
+a:hover{
+    color: white;
+}

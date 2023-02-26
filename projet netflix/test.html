@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Questionnaire</title>
+    <style>
+        body {
+            background-color: "#D4E5E4";
+            text-align: center;
+        }
+        .title {
+            font-family: calibri;
+            font-size: "3";
+            font-weight: bold;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <p class="title">Connaissez-vous les personnages célèbres de la Côte d’Or ? Pour le savoir, faites le test !</p>
+    <br>
+    <form method="post" action="dvp_bis.php">
+        <p>Ecrivain né à Dijon en 1627, ses fameuses prédications figurent parmi les plus belles pages de la langue française, ainsi que ses célèbres « Oraisons Funèbres »<br>S’agit-il de :<br>
+            <input id="q1i1" type=radio name="question1" value="a" /><label for="q1i1">Jacques Bénigne Bossuet</label><br>
+            <input id="q1i2" type=radio name="question1" value="b" /><label for="q1i2">Roger de Bussy-Rabutin</label><br><br>
+        </p>
+        <p>Duc de Bourgogne à la suite de son père Jean Sans Peur en 1419, il s’allia aux Anglais, reconnut Henry V comme Roi de France. Par son mariage, il étendit son territoire jusqu’au Pays-Bas.<br>
+            <input id="q2i1" type=radio name="question2" value="a" /><label for="q2i1">Philippe Le Bon</label><br>
+            <input id="q2i2" type=radio name="question2" value="b" /><label for="q2i2">Philippe Le Hardi</label><br><br>
+        </p>
+        <p>Célèbre naturaliste, ce grand connaisseur des animaux est né à Montbard en 1707. Il est l’auteur d’une monumentale « Histoire Naturelle ».<br>
+            <input id="q3i1" type=radio name="question3" value="a" /><label for="q3i1">Georges-Louis Leclerc de Buffon</label><br>
+            <input id="q3i2" type=radio name="question3" value="b" /><label for="q3i2">François Pompon</label><br><br>
+        </p>
+        <p>Ingénieur ingénieux, il est l’auteur de nombreux ouvrages dont le plus célèbre se situe sur l’esplanade du Champ de Mars.<br>
+            <input id="q4i1" type=radio name="question4" value="a" /> <label for="q4i1">Gustave Eiffel</label><br>
+            <input id="q4i2"type=radio name="question4" value="b" /> <label for="q4i2">François Rude</label><br>
+        </p>
+        <p>Compositeur né à Dijon, il a légué à la postérité son œuvre majeure « Les Indes Galantes ».<br>
+            <input id="q5i1" type="radio" name="question5" value="a" /> <label for="q5i1">Jean-Philippe Rameau</label><br>
+            <input id="q5i2" type="radio" name="question5" value="b" /> <label for="q5i2">Claude Balbastre</label><br>
+        </p>
+        <input type=submit name=Envoyer value=Valider><br>
+<?php
+// on n'affiche les résultats que si le formulaire a bien été soumis
+if (isset($_POST['Envoyer']) && ($_POST['Envoyer'] === 'Valider'))
+{
+    // les bonnes réponses correspondent à la valeur a de chaque possibilité
+    $score     = 0;
+    $incomplet = false;
+    foreach (range(1, 5) as $i)
+    {
+        if (isset($_POST["question$i"]))
+        {
+            if ($_POST["question$i"] === 'a')
+            {
+                $score += 1;
+            }
+        }
+        else
+        {
+            $incomplet = true;
+            break; // pas la peine de continuer on ne va pas calculer le score de toute façon
+        }
+    }
+ 
+    if ($incomplet)
+    {
+        $txt = 'Il faut répondre à toutes les questions mon grand';
+    }
+    elseif ($score <= 2)
+    {
+        $txt = <<<'html'
+Vous ne maîtrisez pas l’histoire de la Côte d’Or, mais l’important c’est de participer ! Vous pouvez tenter d’améliorer vos connaissances en vous rendant sur le site suivant : <a href="http://www.cotedor.fr/cms/page1062.html">Côte d'Or</a>
+html;
+    }
+    elseif ($score === 5)
+    {
+        $txt = <<<'html'
+Bravo ! Vous maîtrisez l’histoire de la Côte d’Or et ses personnages célèbres ! Vous avez travaillé dur et ça se voit !
+Vous pouvez maintenant transmettre votre savoir en vous rendant sur le site suivant : <a href="http://www.acadomia.fr/enseignants-nous-recrutons/recrutement-enseignant.html"<>Acadomia recrutement</a>.
+html;
+    }
+    else
+    {
+        $txt = 'Vous avez fait le minimum syndical, vous méritez la moyenne';
+    }
+ 
+    echo <<<html
+    <p class="bold">{$txt}</p>
+html;
+}
+?>
+</form>
+</body>
+</html>

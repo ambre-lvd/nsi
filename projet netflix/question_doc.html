@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style_doc.css"/>
+	<title>Question 1</title>
+</head>
+<body>
+  <p class="avancement">1/5</p>
+        <h1>Question 1:</h1>
+        <h1 class="t1p4">1. Sur quel artiste musical n'y a-t-il pas de documentaire ?</h1>
+
+         <form NAME="qcm1">
+<p>
+  <img src="image/img_musique.jpg" alt="note_de_musique" /><br> <br>
+<B>Réponses :</B>
+<INPUT TYPE=RADIO NAME="choix">PNL</INPUT>
+<INPUT TYPE=RADIO NAME="choix">Gims</INPUT>
+<INPUT TYPE=RADIO NAME="choix">Bigflo et Oli</INPUT>
+<INPUT TYPE=RADIO NAME="choix">Ninho</INPUT>
+<BR><BR>
+
+<INPUT CLASS="verification" TYPE=BUTTON NAME="bouton" VALUE="Vérifier"
+ ONCLICK="if (document.qcm1.choix[3].checked) {alert('Bonne réponse.')} 
+          else {alert('Réponse fausse.')}">
+</p>
+
+</INPUT>
+</form><br><br><br><br><br>
+
+        <button class="gauche">
+      <span><a href="documentaire.html">Quitter</a></span>
+    </button>
+
+       <button class="droite">
+      <span><a href="question2_doc.html">Suivant</a></span>
+    </button>
+ <script src="test.js"></script>
+</body>
+</html>

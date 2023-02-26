@@ -1,0 +1,209 @@
+p
+{
+    font-size: 1.3em;
+    font-family: "Comic Sans MS";
+    text-shadow: 4px 4px 8px black;
+    text-align: center;
+    color: white
+}
+
+
+h1
+{
+    font-size: 5em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-decoration: underline;
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-shadow: 4px 4px 8px black;
+    text-align: center;
+    color: white
+}
+
+h2
+{
+    font-size: 3em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-shadow: 4px 4px 8px black;
+    text-align: center;
+    color: white
+}
+
+
+ol
+{
+    font-size: 1.6em;
+    font-family: "Verdana";
+    font-style: italic;
+    text-shadow: 4px 4px 8px black;
+    text-align: center;
+    color: white
+}
+
+ol:hover
+{
+   font-weight: bold;
+}
+
+
+p:hover
+{
+    border-left: 3px solid black;
+}
+
+
+h1:hover
+{
+    font-style: italic;
+}
+
+h2:hover
+{
+    font-style: italic;
+}
+
+
+.t1p1
+{
+    background-image: url("images/coucher_soleil.jpeg");
+    text-align: center;
+}
+
+
+.drapeau
+{
+    text-align: right;
+}
+
+
+.t1p2
+{
+    background-image: url("images/eau.jpeg");
+    text-align: center;
+}
+
+
+.t1p3
+{
+    background-image: url("images/h1_venise.jpg");
+    text-align: center;
+}
+
+
+.t1p4
+{
+    background-image: url("images/île.jpg");
+    text-align: center;
+}
+
+
+.page2
+{
+background-image: url("Images/fond_bali.jpg");
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+}
+
+#background_opacity {
+position: fixed;
+z-index: -10;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: rgba(255, 255, 255, 0.5); /* L'opacite se regle ici */
+}
+
+
+.page1
+{
+background-image: url("Images/fond_voyages.jpg");
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+}
+
+#background_opacity {
+position: fixed;
+z-index: -10;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: rgba(255, 255, 255, 0.5); /* L'opacite se regle ici */
+}
+
+
+.page3
+{
+background-image: url("Images/fond_venise.jpg");
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+}
+
+#background_opacity {
+position: fixed;
+z-index: -10;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: rgba(255, 255, 255, 0.5); /* L'opacite se regle ici */
+}
+
+
+.page4
+{
+background-image: url("Images/fond_guadeloupe.jpg");
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+}
+
+#background_opacity {
+position: fixed;
+z-index: -10;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: rgba(255, 255, 255, 0.5); /* L'opacite se regle ici */
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #AAEEEE;
+}
+
+li
+{
+    font-size: 1.6em;
+    font-family: "Verdana";
+    font-style: italic;
+    text-align: center;
+    color: white
+}
+
+li:hover
+{
+   font-weight: bold;
+}

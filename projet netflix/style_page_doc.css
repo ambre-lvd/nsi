@@ -1,0 +1,125 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #F00020;
+}
+
+li
+{
+    font-size: 1.6em;
+    font-family: "Verdana";
+    font-style: italic;
+    text-align: center;
+    color: white
+}
+
+li:hover
+{
+   font-weight: bold;
+}
+.introduction
+{
+    font-size: 3em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-shadow: 4px 4px 8px black;
+    text-align: center;
+    color: white
+}
+body{
+    background: url(image/fond_rouge.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+p
+{
+    
+     text-align: center;
+
+}
+h1{
+     text-align: center;
+     color: white;
+      font-size: 5em;
+}
+h2{
+    border: 2px solid black;
+}
+h2 a{
+    color: white;
+    text-decoration: none;
+}
+form{
+    text-align: center;
+
+}
+button {
+        display: inline-block;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #303030;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+.droite{
+        float: right;
+}
+a{
+  color: black;
+}

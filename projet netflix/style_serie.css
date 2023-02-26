@@ -1,0 +1,87 @@
+ul{    
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #F00020;
+}
+
+li
+{
+    font-size: 1.6em;
+    font-family: "Verdana";
+    font-style: italic;
+    text-align: center;
+    color: white
+}
+
+li:hover
+{
+   font-weight: bold;
+}
+
+
+
+.introduction
+{
+    font-size: 3em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-shadow: 4px 4px 8px black;
+    color: red;
+    border: 5px white solid;
+    float: right;
+}
+
+
+
+.page2
+{
+    background-image: url("image/fond_series.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1
+{
+    font-size: 5em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-decoration: underline;
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-shadow: 4px 4px 8px black;
+    text-align: center;
+    color: white
+}
+
+.image
+{
+	text-align: center;
+}
+
+
